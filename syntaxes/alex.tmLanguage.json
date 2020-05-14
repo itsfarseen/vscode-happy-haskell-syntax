@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Alex",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "name": "meta.embedded.block.haskell",
+      "begin": "^[{]$",
+      "end": "^[}]$",
+      "patterns": [
+        {
+          "include": "source.haskell"
+        }
+      ],
+      "beginCapture": {
+        "name": "string"
+      }
+    },
+    {
+      "match": "{(.*)}",
+      "captures": {
+        "1": {
+          "name": "meta.embedded.block.haskell",
+          "patterns": [
+            {
+              "include": "source.haskell"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "match": "((\\$|@)[a-zA-Z_0-9]+)",
+      "name": "variable.other"
+    },
+    {
+      "match": "([0-9a-zA-Z+-]|\\\\.|\\[|\\])+",
+      "name": "string.regexp"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.alex",
+          "match": "tokens ?:-"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.alex",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.alex",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.alex"
+}

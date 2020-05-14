@@ -1,0 +1,40 @@
+{
+  "name": "alex-haskell-syntax",
+  "displayName": "Alex Haskell Syntax",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.45.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "alex",
+        "aliases": [
+          "Alex",
+          "alex"
+        ],
+        "extensions": [
+          ".x"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "alex",
+        "scopeName": "source.alex",
+        "path": "./syntaxes/alex.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.haskell": "haskell"
+        }
+      }
+    ]
+  },
+  "devDependencies": {
+    "js-yaml": "^3.13.1"
+  }
+}
