@@ -1,5 +1,5 @@
 $schema: "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json"
-name: Alex
+name: Happy
 patterns:
   - include: "#keywords"
   - include: "#strings"
@@ -14,20 +14,20 @@ patterns:
         name: meta.embedded.block.haskell
         patterns:
           - include: source.haskell
-  - match: ((\$|@)[a-zA-Z_0-9]+)
+  - match: (\%[a-zA-Z_0-9]+)
     name: variable.other
   - match: ([0-9a-zA-Z+-]|\\.|\[|\])+
     name: string.regexp
 repository:
   keywords:
     patterns:
-      - name: keyword.control.alex
+      - name: keyword.control.happy
         match: "tokens ?:-"
   strings:
-    name: string.quoted.double.alex
+    name: string.quoted.double.happy
     begin: '"'
     end: '"'
     patterns:
-      - name: constant.character.escape.alex
+      - name: constant.character.escape.happy
         match: \\.
-scopeName: source.alex
+scopeName: source.happy

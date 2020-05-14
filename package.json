@@ -1,6 +1,6 @@
 {
-  "name": "alex-haskell-syntax",
-  "displayName": "Alex Haskell Syntax",
+  "name": "happy-haskell-syntax",
+  "displayName": "Happy Haskell Syntax",
   "description": "",
   "version": "0.0.1",
   "engines": {
@@ -12,22 +12,22 @@
   "contributes": {
     "languages": [
       {
-        "id": "alex",
+        "id": "happy",
         "aliases": [
-          "Alex",
-          "alex"
+          "Happy",
+          "happy"
         ],
         "extensions": [
-          ".x"
+          ".y"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "alex",
-        "scopeName": "source.alex",
-        "path": "./syntaxes/alex.tmLanguage.json",
+        "language": "happy",
+        "scopeName": "source.happy",
+        "path": "./syntaxes/happy.tmLanguage.json",
         "embeddedLanguages": {
           "meta.embedded.block.haskell": "haskell"
         }
