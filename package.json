@@ -3,6 +3,7 @@
   "displayName": "Happy Haskell Syntax",
   "description": "",
   "version": "0.0.1",
+  "publisher": "Farzeen",
   "engines": {
     "vscode": "^1.45.0"
   },
